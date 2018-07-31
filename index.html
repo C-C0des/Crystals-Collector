@@ -2,27 +2,32 @@
 <html>
 <head>
     <meta charset="UTF-8">
-	<title>Crystals Collector</title>
-  <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>Crystals Collector</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
 
-    <!--=========Header================-->
-    <header id = "masthead">
+     <!--=========Header================-->
+     <header id = "masthead">
          <h1 id ="gametitle">Crystal Collector</h1>
-    </header>
-    <!--=========Header==================-->
+     </header>
+     <!--=========Header==================-->
 
-    <!--==========Modal===============-->
-    <button id="myBtn">Instructions</button>
-         <div id = "myModal" class = "modal">
-              <div class = "modal-content">
-              <span class="close">&times;</span>
-                 <p id = "instext"> You will be given a random number at the start of the game.
-                      <br>
-                     There are four crystals below.By clicking on a crystal you will
+     <div class ="container">
+         <div class = "row">
+             <div class = "col-md-12">
+                   <p>
+                      <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                         Instructions
+                      </button>
+                  </p>
+                  <div class="collapse" id="collapseExample">
+                  <div class="card card-body">
+                      You will be given a random number at the start of the game.
+                       <br>
+                      There are four crystals below.By clicking on a crystal you will
                      add a specific amount of points to your total score.
                      <br>
                      You win the game by matching your total score to random number,
@@ -31,35 +36,29 @@
                      The value of each crystal is hidden from you untill you click on it
                      <br>
                      Each time when the game starts, the game will change the values of each crystal
-                 </p>
-              </div>
-         </div>
-    <!--==========Modal===============-->
+                  </div>
+                  </div>
+    
+                  <a class="btn btn-primary" href="playgame.html" role="button">Start Game</a>
 
-    <!--==========Game Area===============-->
-     <div class = "crystalgamebox" id = "matchnum"> <h4>Match this number:</div>
-     
-     <div  class = "crstalgamebox" id = "score"> <h4>Your total score:</h4></div>
+     </div> <!--Column Div ends-->
 
-     <div  class = "crystalgamebox" id="crystals">
-            <img src="assets/images/ssgameicontobuy1.jpeg" class="click" id="bluecrystal">
-            <img src="assets/images/ssgameicontobuy2.jpg" class="click" id="purplecrystal">
-            <img src="assets/images/ssgameicontobuy3.jpg" class="click" id="greencrystal">
-            <img src="assets/images/ssgameicontobuy4.jpg" class="click" id="redcrystal">
-     </div>
+    </div>  <!--Row Div Ends-->
 
-      <div class = "crystalgamebox" id ="result">
-          <h4>Wins: <span id = "wins"></span></h4>
-          <h4>Losses: <span id = "losses"></span></h4>
-      </div>
-    <!--==========Game Area===============-->
+    <div>  <!--Container Div Ends-->
+
 
     <!--==========Footer===============--> 
       <footer>
           <p> ccodes &copy; </p>
+          <button> Play Rock Paper Scissors</button>
+          <button> Play Hangman </button>
       </footer>
     <!--==========Footer===============-->
    
-   <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
