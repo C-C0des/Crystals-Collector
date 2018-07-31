@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>Crystals Collector</title>
+  <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
-    
+
+    <!--=========Header================-->
+    <header id = "masthead">
+         <h1 id ="gametitle">Crystal Collector</h1>
+    </header>
+    <!--=========Header==================-->
+
+    <!--==========Modal===============-->
+    <button id="myBtn">Instructions</button>
+         <div id = "myModal" class = "modal">
+              <div class = "modal-content">
+              <span class="close">&times;</span>
+                 <p id = "instext"> You will be given a random number at the start of the game.
+                      <br>
+                     There are four crystals below.By clicking on a crystal you will
+                     add a specific amount of points to your total score.
+                     <br>
+                     You win the game by matching your total score to random number,
+                     you lose the game if your total score goes above the random number.
+                     <br>
+                     The value of each crystal is hidden from you untill you click on it
+                     <br>
+                     Each time when the game starts, the game will change the values of each crystal
+                 </p>
+              </div>
+         </div>
+    <!--==========Modal===============-->
+
+    <!--==========Game Area===============-->
+     <div class = "crystalgamebox" id = "matchnum"> <h4>Match this number:</div>
+     
+     <div  class = "crstalgamebox" id = "score"> <h4>Your total score:</h4></div>
+
+     <div  class = "crystalgamebox" id="crystals">
+            <img src="assets/images/ssgameicontobuy1.jpeg" class="click" id="bluecrystal">
+            <img src="assets/images/ssgameicontobuy2.jpg" class="click" id="purplecrystal">
+            <img src="assets/images/ssgameicontobuy3.jpg" class="click" id="greencrystal">
+            <img src="assets/images/ssgameicontobuy4.jpg" class="click" id="redcrystal">
+     </div>
+
+      <div class = "crystalgamebox" id ="result">
+          <h4>Wins: <span id = "wins"></span></h4>
+          <h4>Losses: <span id = "losses"></span></h4>
+      </div>
+    <!--==========Game Area===============-->
+
+    <!--==========Footer===============--> 
+      <footer>
+          <p> ccodes &copy; </p>
+      </footer>
+    <!--==========Footer===============-->
+   
+   <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
