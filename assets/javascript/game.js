@@ -17,13 +17,14 @@ var losses = 0;
 var target = 0; 
 var score = 0;
 
+//create for loop for this later dry code
 
-var crystal1 = Math.floor(Math.random()*10);
-var crystal2 = Math.floor(Math.random()*10);
-var crystal3 = Math.floor(Math.random()*10);
-var crystal4 = Math.floor(Math.random()*10);
+var crystal1 = Math.floor(Math.random()*12) +1;
+var crystal2 = Math.floor(Math.random()*12) +1;
+var crystal3 = Math.floor(Math.random()*12) + 1;
+var crystal4 = Math.floor(Math.random()*12) + 1;
 
-var randomNumber = Math.floor(Math.random()*100);
+var randomNumber = Math.floor(Math.random()*120 +19);
   
 
 
@@ -36,14 +37,18 @@ var randomNumber = Math.floor(Math.random()*100);
 
 function startAndResetGame (){
 
+        var score = 0;
+
+        target = Math.floor(Math.random()*120)+19;
+
 }
 
 
 /*==================================================
-                      Game
+     Game Interactivity - DOM jQuery
 ===================================================*/
 
- //crystal click functions
+ //crystal click 
 
 $("#blue").on ('click', function(){
    
