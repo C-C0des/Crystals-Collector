@@ -21,8 +21,10 @@ var score = 0;
 
 var crystal1 = Math.floor(Math.random()*12) +1;
 var crystal2 = Math.floor(Math.random()*12) +1;
-var crystal3 = Math.floor(Math.random()*12) + 1;
-var crystal4 = Math.floor(Math.random()*12) + 1;
+var crystal3 = Math.floor(Math.random()*12) +1;
+var crystal4 = Math.floor(Math.random()*12) +1;
+
+//or create an object then loop through it?
 
 var randomNumber = Math.floor(Math.random()*120 +19);
   
