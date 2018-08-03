@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Crystals Collector</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="http://code.jquery.com/jquery.js"></script>
 </head>
 <body>
 
      <!--=========Header================-->
      <header id = "masthead">
-         <h1 id ="gametitle">Crystal Collector</h1>
+         <h1 id ="gametitle">Crystal C<img src="data:image/png;base64,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">
+             llect
+             <img src="data:image/png;base64,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">
+             r</h1>
      </header>
      <!--=========Header==================-->
-
      <div class ="container">
          <div class = "row">
-             <div class = "col-md-12">
+             <div class = "col-md-12 text-center">
                    <p>
                       <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                          Instructions
@@ -47,22 +48,30 @@
 
     <div>  <!--Container Div Ends-->
 
+
     
 
 
     <!--==========Footer===============--> 
-      <footer>
-             <p>Play more games</p>
-             <a class="btn btn-outline-danger btn-lg" href="https://christinecodes.github.io/WordGuess/" role="button">Hangman</a>
-             <a class="btn btn-outline-primary btn-lg" href="https://christinecodes.github.io/Rock-Paper-Scissors" role="button">Rock Paper Scissors</a>
-             <a class="btn btn-outline-dark btn-lg" href="https://christinecodes.github.io/unit-4-game" role="button">Crystal Collector</a>
-             <p> ccodes &copy; </p>
+       <footer>
+            <div class = "primary">
+                    <p>Play more games</p>
+                    <a class="btn btn-outline-danger btn-lg" href="https://christinecodes.github.io/WordGuess/" role="button">Hangman</a>
+                    <a class="btn btn-outline-primary btn-lg" href="https://christinecodes.github.io/Rock-Paper-Scissors" role="button">Rock Paper Scissors</a>
+                    <a class="btn btn-outline-dark btn-lg" href="https://christinecodes.github.io/unit-4-game" role="button">Crystal Collector</a>
+            </div>
+            <div class = "secondary">
+                    <p> ccodes &copy; </p>
+            </div>
         </footer>
     <!--==========Footer===============-->
-   
+      
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+   
    
     <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

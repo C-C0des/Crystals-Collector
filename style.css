@@ -1,9 +1,31 @@
 body{
-    background:black;
+	margin:0 auto;
+}
+header{
+    background-color: black;
     color:white;
+    padding:60px;
+    margin-bottom: 10px;    
+    text-align:center;   
 }
 
+
+
+/*===========================
+           FOOTER
+===========================*/
+
 footer{
-    background: grey;
-    border-top:8px solid black;
+    color:white;
+    bottom:0;
+    padding:20px;
+    text-align:center;
+}
+
+
+.primary {
+    background-color:black; color:black;
+}
+.secondary{
+    background-color:darkgrey;
 }
