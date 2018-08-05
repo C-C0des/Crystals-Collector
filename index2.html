@@ -5,7 +5,7 @@
     <title>Crystal Collector</title>
     <!-- Latest compiled and minified CSS -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
@@ -25,66 +25,49 @@
         <div class = "row"> 
 
             <div class="col-md-5 col-lg-5">
-                  <div class = "panel panel-default">
-                      <div class = "panel-heading">
-                           <h4 class = "panel-title text-center">Target</h4>
-                      </div>
-                      <div class = "panel-body">
-                           <h4 class = "panel-title text-center">64</h4>
-                      </div>
-                  </div>
+                    <p>
+                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                               Instructions
+                            </button>
+                        </p>
+                        <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            You will be given a random number at the start of the game.
+                             <br>
+                            There are four crystals below.By clicking on a crystal you will
+                           add a specific amount of points to your total score.
+                           <br>
+                           You win the game by matching your total score to random number,
+                           you lose the game if your total score goes above the random number.
+                           <br>
+                           The value of each crystal is hidden from you untill you click on it
+                           <br>
+                           Each time when the game starts, the game will change the values of each crystal
+                        </div>
+                        </div>
+          
+                        <a class="btn btn-primary" href="index.html" role="button">Start Game</a>
+      
+                
             </div>
 
-            <div class="col-md-2 col-lg-2">
-                    <div class = "panel panel-default">
-                        <div class = "panel-heading">
-                             <h4 class = "panel-title text-center"><span id = "winlose">Wins &nbsp; &amp; &nbsp; Losses</span> </h4>
-                        </div>
-                        <ul class = "list-group">
-                            <li class = "list-group-item"> Wins: <span id ="wincounter"></span> </li>
-                            <li class = "list-group-item"> Losses: <span id ="losscounter"></span></li>
-                        </ul>
-                    </div>
-              </div>
-
-            <div class="col-md-5 col-lg-5">
-                    <div class = "panel panel-default">
-                        <div class = "panel-heading">
-                             <h4 class = "panel-title text-center">Score</h4>
-                        </div>
-                        <div class = "panel-body">
-                             <h4 class = "panel-title text-center">0</h4>
-                        </div>
-                    </div>
-              </div>
 
         </div> <!--Row 1 Div ends-->
 
-        <div class = "row text-center" id="crystals">
-               <div class = "col-md-3">
-                    <img src="assets/images/ssgameicontobuy1.jpeg" class="click" id="blue">
-               </div>
-               <div class = "col-md-3">
-                   <img src="assets/images/ssgameicontobuy2.jpg" class="click" id="purple">
-               </div>
-               <div class = "col-md-3">
-                    <img src="assets/images/ssgameicontobuy3.jpg" class="click" id="green">
-               </div>
-               <div class = "col-md-3">
-                    <img src="assets/images/ssgameicontobuy4.jpg" class="click" id="red">
-                </div>
-         </div>
 
     </div> <!--Container Div ends-->
 
 
     <!--==========Game Area Ends===============-->
 
-    <a class="btn btn-primary" href="index2.html" role="button">Go Back</a>
+    <div class = "push"></div>
+
 
     <!--==========Footer===============--> 
       <footer>
-          <a class="btn btn-primary" href="https://christinecodes.github.io/gamevault/" role="button">Game Vault</a>
+            <p>Play more games</p>
+            <a class="btn btn-outline-danger btn-lg" href="https://christinecodes.github.io/WordGuess/" role="button">Hangman</a>
+            <a class="btn btn-outline-primary btn-lg" href="https://christinecodes.github.io/Rock-Paper-Scissors" role="button">Rock Paper Scissors</a>
           <p> ccodes &copy; </p>
         </footer>
     <!--==========Footer Ends===============-->

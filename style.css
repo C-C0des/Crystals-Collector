@@ -9,6 +9,10 @@ header{
     text-align:center;   
 }
 
+#gametitle{
+    font-size: 40px;
+}
+
 #crystals {
   margin-bottom: 40px;
 }
