@@ -1,139 +1,99 @@
 $( document ).ready(function(){
-
-  /* ============================================== */
- /*    Establish variables and Dom maniplation     */
-
-   //1:  Generate a random Target Number for user to guess 
-   var targetNumber = Math.floor(Math.random()*102)+19;
-        
-   //2: Display the target number in browser
-   $('#usertarget').text(targetNumber);
-        
-   //3: Generate each random crystal values 
-   var crystal1 = Math.floor(Math.random()*12)+1;
-   var crystal2 = Math.floor(Math.random()*12)+1;
-   var crystal3 = Math.floor(Math.random()*12)+1;
-   var crystal4 = Math.floor(Math.random()*12)+1;
-        
-   //4: Game counters 
-    var userScore = 0; 
+  
+    var target = [Math.floor(Math.random()*120)+19];
+    $('#usertarget').html(target);
+    
+    //Generate random number for each crystal
+    var crystal1 = [Math.floor(Math.random()*12)+1];
+    var crystal2 = [Math.floor(Math.random()*12)+1];
+    var crystal3 = [Math.floor(Math.random()*12)+1];
+    var crystal4 = [Math.floor(Math.random()*12)+1];
+    
+    // Variables to keep track of wins, losses and total
+    var score = 0; 
     var wins = 0;
     var losses = 0;
-        
-    //5: display  wins and losses to user
-     $('#wincounter').text(wins);
-     $('#losscounter').text(losses);
-
-
-
-
- /*===================================================*/
- /*      Game Functions + Dom Manipulation            */
-      
-
-  // 1: Function -- Start and Reset the Game
     
-  function startAndResetGame (){
+  
+  $('#wins').text(wins);
+  $('#losses').text(losses);
 
-      targetNumber=Math.floor(Math.random()*102)+19;
-        $("#userTarget").text(targetNumber);
+   reset();
+  
+  // Reset game
+  function reset(){
 
-      crystal1= Math.floor(Math.random()*12)+1;
-      crystal2 = Math.floor(Math.random()*12)+1;
-      crystal3= Math.floor(Math.random()*12)+1;
-      crystal4= Math.floor(Math.random()*12)+1;
+        target = Math.floor(Math.random()*120)+19;
+        $('#usertarget').html(target);
 
-       userScore= 0;
-       $('#userScore').text(userScore);
+        crystal1 = Math.floor(Math.random()*12)+1;
+        crystal2 = Math.floor(Math.random()*12)+1;
+        crystal3 = Math.floor(Math.random()*12)+1;
+        crystal4 = Math.floor(Math.random()*12)+1;
 
-    } //function SRG ends
+        score= 0;
+        $('#userscore').html(score);
+   } 
 
- //2: Call SRG function
+  // Clicking crystals
+    $('#blue').on ('click', function(){
+      score = score + crystal1;
+      console.log(score);
+      $('#userscore').text(score); 
+            //Win & lose conditions
+          if (score == target){
+            alert("You Win");
+          }
+          else if ( score > target){
+            alert("You Lose");
+          }   
+  
+    })  
 
-    startAndResetGame();
-
-// 3: Crystal CLicks and Corresponding Functions
-
-    //Blue Crystal
-    $("#blue").on ("click", function(){
-     userScore = userScore + crystal1;
-          
-    $('#userscore').text(userScore); 
-                
-     if (userScore == targetNumber){
-                userwins();
-         } else if ( userScore > targetNumber){
-                userlosses();
-              }   
-
-     console.log(userScore);
-  })  
-
-     //Purple Crystal
-      $("#purple").on ("click", function(){
-        userScore =  userScore + crystal2;
-             
-       $('#userscore').text(userScore); 
-                   
-        if (userScore == targetNumber){
-                   userwins();
-            } else if ( userScore > targetNumber){
-                   userlosses();
-                 }   
- })  
-
-
-     //Green Crystal
-     $("#green").on ("click", function(){
-        userScore = userScore+ crystal3;
-             
-       $('#userscore').text(userScore); 
-                   
-        if (userScore == targetNumber){
-                   userwins();
-            } else if ( userScore > targetNumber){
-                   userlosses();
-                 }   
- })  
-
-   
-     //Red Crystal
-     $("#red").on ("click", function(){
-        userScore = userScore + crystal4;
-             
-       $('#userscore').text(userScore); 
-                   
-        if (userScore == targetNumber){
-                   userwins();
-            } else if ( userScore > targetNumber){
-                   userlosses();
-                 }   
- })  
+    $('#purple').on ('click', function(){
+      score = score + crystal2;
+      console.log(score);
+      $('#userscore').text(score); 
+            //Win & lose conditions
+          if (score == target){
+            alert("You Win");
+          }
+          else if ( score > target){
+            alert("You Lose");
+          }   
+  
+    })  
 
 
-  // 4:  Win and lose functions
-   
-    //If the user wins
-      
-       function userwins(){
-        swal("You win!");
-          wins++; 
-
-          $('#wincounter').text(wins);
-          startAndResetGame();
-        }
-
-    // If the user losses
-
-        function userlosses(){
-        swal ("You lose!");
-          losses++;
-
-          $('#losscounter').text(losses);
-          startAndResetGame()
-        }
+    $('#green').on ('click', function(){
+      score = score + crystal3;
+      console.log(score);
+      $('#userscore').text(score); 
+            //Win & lose conditions
+          if (score == target){
+            alert("You Win");
+          }
+          else if ( score > target){
+            alert("You Lose");
+          }   
+  
+    })  
 
 
+    $('#red').on ('click', function(){
+      score = score + crystal4;
+      console.log(score);
+      $('#userscore').text(score); 
+            //Win & lose conditions
+          if (score == target){
+            alert("You Win");
+          }
+          else if ( score > target){
+            alert("You Lose");
+          }   
+  
+    })  
 
 
-      }); 
+       
+  }); 
