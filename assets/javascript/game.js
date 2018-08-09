@@ -1,4 +1,6 @@
 $( document ).ready(function(){
+
+  ///NOTE -- NEED TO REFACTOR AND DRY "UP" CODE
   
     var target = [Math.floor(Math.random()*120)+19];
     $('#usertarget').html(target);
@@ -13,10 +15,7 @@ $( document ).ready(function(){
     var score = 0; 
     var wins = 0;
     var losses = 0;
-    
   
-  $('#wins').text(wins);
-  $('#losses').text(losses);
 
    reset();
   
@@ -42,12 +41,17 @@ $( document ).ready(function(){
       $('#userscore').text(score); 
             //Win & lose conditions
           if (score == target){
-            alert("You Win");
+            swal("You Win");
             reset();
+            wins++
+            $('#wincounter').text(wins);
+
           }
           else if ( score > target){
-            alert("You Lose");
+            swal("You Lose");
             reset();
+            losses++
+            $("#losscounter'").text(losses);
           }   
 
           
@@ -59,15 +63,21 @@ $( document ).ready(function(){
       console.log(score);
       $('#userscore').text(score); 
             //Win & lose conditions
-          if (score == target){
-            swal("You Win");
-            reset();
-          }
-          else if ( score > target){
-            swal("You Lose");
-            reset();
-          }   
-
+            if (score == target){
+              swal("You Win");
+              reset();
+              wins++
+              $('#wincounter').text(wins);
+  
+            }
+            else if ( score > target){
+              swal("You Lose");
+              reset();
+              losses++
+              $('#losscounter').text(losses);
+            }   
+  
+        
           
   
     })  
@@ -78,15 +88,21 @@ $( document ).ready(function(){
       console.log(score);
       $('#userscore').text(score); 
             //Win & lose conditions
-          if (score == target){
-            swal("You Win");
-            reset();
-          }
-          else if ( score > target){
-            swal("You Lose");
-            reset();
-          }   
-
+            if (score == target){
+              swal("You Win");
+              reset();
+              wins++
+              $('#wincounter').text(wins);
+  
+            }
+            else if ( score > target){
+              swal("You Lose");
+              reset();
+              losses++
+              $('#losscounter').text(losses);
+            }   
+  
+        
           
   
     })  
@@ -97,16 +113,21 @@ $( document ).ready(function(){
       console.log(score);
       $('#userscore').text(score); 
             //Win & lose conditions
-          if (score == target){
-            swal("You Win");
-            reset();
-          }
-          else if ( score > target){
-            swal("You Lose");
-            reset();
-          }   
-
-         
+            if (score == target){
+              swal("You Win");
+              reset();
+              wins++
+              $('#wincounter').text(wins);
+  
+            }
+            else if ( score > target){
+              swal("You Lose");
+              reset();
+              losses++
+              $('#losscounter').text(losses);
+            }   
+  
+        
   
     })  
 
