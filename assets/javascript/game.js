@@ -43,10 +43,14 @@ $( document ).ready(function(){
             //Win & lose conditions
           if (score == target){
             alert("You Win");
+            reset();
           }
           else if ( score > target){
             alert("You Lose");
+            reset();
           }   
+
+          
   
     })  
 
@@ -56,11 +60,15 @@ $( document ).ready(function(){
       $('#userscore').text(score); 
             //Win & lose conditions
           if (score == target){
-            alert("You Win");
+            swal("You Win");
+            reset();
           }
           else if ( score > target){
-            alert("You Lose");
+            swal("You Lose");
+            reset();
           }   
+
+          
   
     })  
 
@@ -71,11 +79,15 @@ $( document ).ready(function(){
       $('#userscore').text(score); 
             //Win & lose conditions
           if (score == target){
-            alert("You Win");
+            swal("You Win");
+            reset();
           }
           else if ( score > target){
-            alert("You Lose");
+            swal("You Lose");
+            reset();
           }   
+
+          
   
     })  
 
@@ -86,11 +98,15 @@ $( document ).ready(function(){
       $('#userscore').text(score); 
             //Win & lose conditions
           if (score == target){
-            alert("You Win");
+            swal("You Win");
+            reset();
           }
           else if ( score > target){
-            alert("You Lose");
+            swal("You Lose");
+            reset();
           }   
+
+         
   
     })  
 
